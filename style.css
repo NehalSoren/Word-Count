@@ -8,17 +8,21 @@ body {
   font-size: 18px;
   font-weight: bold;
   font-family: Poppins;
+  background-color: #98FB98; /* Light green background */
+  animation: fadeIn 1s ease; /* Fade in animation */
 }
 
 .container {
   height: auto;
   width: 312px;
-  border: 1px solid black;
+  border: 1px solid #008000; /* Green border */
   padding: 5px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #F0FFF0; /* Honeydew background */
+  animation: slideInFromTop 1s ease; /* Slide in from top animation */
 }
 
 h1,
@@ -26,6 +30,7 @@ p {
   text-align: center;
   margin: 5px 0 0 0;
   padding: 0;
+  color: #008000; /* Green text color */
 }
 
 p {
@@ -43,22 +48,25 @@ input {
   outline: none;
   border: none;
   background: none;
+  animation: fadeIn 1s ease; /* Fade in animation */
 }
 
 input {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #008000; /* Green border bottom */
   font-size: 18px;
   font-weight: bold;
 }
 
 .result-area {
   margin-top: 10px;
+  animation: fadeIn 1s ease; /* Fade in animation */
 }
 
 #result {
   font-size: 20px;
   margin: 10px 0 0 0;
   padding: 0;
+  animation: slideInFromBottom 1s ease; /* Slide in from bottom animation */
 }
 
 button {
@@ -68,4 +76,50 @@ button {
   height: 40px;
   font-size: 18px;
   font-weight: bold;
+  background-color: #98FB98; /* Light green background */
+  border: 1px solid #008000; /* Green border */
+  color: #008000; /* Green text color */
+  animation: pulse 2s infinite; /* Pulse animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 128, 0, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0);
+  }
 }
